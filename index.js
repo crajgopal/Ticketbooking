@@ -1,3 +1,4 @@
+//Function to toggle values of to and fro city.
 function replace(){
  const from= document.getElementById("from").value
  const to =document.getElementById("to").value;
@@ -56,6 +57,7 @@ function fromCity(){
 
     const fromCity = document.getElementById('from').value 
        console.log(fromCity)
+  //Fetching the weather info from openweathermap.org by passing city name and API key .
 
        fetch('https://api.openweathermap.org/data/2.5/weather?q='+fromCity+'&appid='+apik)
        .then(res => res.json())
@@ -66,7 +68,8 @@ function fromCity(){
            let description1 = data['weather']['0']['description']
            let temp = data['main']['temp']
            let windSpeed = data['wind']['speed']
-       
+       //Assigning the values from fetch object values and displaying it in HTML.
+
            city.innerHTML=`City: ${cityName}`
            temp1.innerHTML = `Temperature: ${ convertion(temp)} C`
            description.innerHTML = `Conditions: ${description1}`
@@ -81,7 +84,7 @@ function fromCity(){
 
 
 }
-
+//Setting localstorage variable  name aand email so that thay can be accesed in other pages..
         function myName(){
            const fName= document.getElementById("fullN").value
             const email1=document.getElementById("email").value
@@ -90,7 +93,7 @@ function fromCity(){
            localStorage.setItem("Email",email1)
 
         }
-
+//Function to display payment options.
         function getOption(){
          const val =document.getElementById('payType').value
          if (val ==='cc'){
@@ -120,12 +123,13 @@ function fromCity(){
 
        today = yyyy + '-' + mm + '-' + (dd);
 
-      
+      //Disabling the dates before today 
        $('#depart').attr('min',today);
 
     
   function departD(){
   let maxDate =document.getElementById('depart').value
+  //disabling the dates before departing date (maxDate )
   $('#return').attr('min',maxDate);
 
   }
@@ -138,7 +142,7 @@ function addCode(){
     
  if(d>3)   {
   
-
+//Adding elements dynamically to html.
     document.getElementById("addCode").innerHTML =`<details><summary> <b>Passenger4</b></summary>
     Full Name:<input type="text" id="P3fullN" placeholder="Full Name" > Gender:  <input type="radio"   name="gender3" value ="male"> Male
     <input type="radio" name="gender" value ="female"> Female	<br>
@@ -198,7 +202,7 @@ function addCode(){
   
 }
 }
-
+//Functions to remove elments dynamically using Jquery
 function remove2(){
 
     $('#addCode2').remove()
