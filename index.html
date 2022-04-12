@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Booking System</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+   <div class="container"><!--container-->
+
+        <form class="form-group" name ="form" action ="./booking.html" method ="Get"><!--form-->
+            
+            <h1 class="text-center">Airline Booking System</h1><br>
+       <div id ="info">    <h2> <b><div id="hello"></div></b></h2>
+        <img id ="weather" src ="weather.jpg">
+        <div id="city"></div>
+        <div id="temp1"></div>
+        <div id="description"></div>
+        <div id="wind"></div>
+       </div>
+            <div id="form"><!--form-->
+                <h3 class="text-white">Booking Details</h3>
+
+            <div id="input"><!--input-->
+                <input type="text" id="from" placeholder="From" name="from"  required onfocusout="fromCity()"><img id ="arrow" src ="reversearrow.jpg" onclick="replace()">
+                &nbsp;<input type="text" id="to" placeholder="To" name ="to"  required>
+                <br><select  id="input-group">
+                    <option value="">Preferred Airline</option>
+                    <option value="">Qantas</option>
+                    <option value="">Singapoor Airlines</option>
+                    <option value="">Qatar airways</option>
+                    <option value="">Etihad Airways</option>
+                    <option value="">Air New Zealand</option>
+                    <option value="">Jetstar</option>
+                    <option value="">Virgin Australia</option>
+                    <option value="">Air Chaina</option>
+                    <option value="">Cathay Pacific</option>
+                    <option value="">Turkish Airlines</option>
+                    <option value="">Air India</option>
+                    <option value="">Aeroflot</option>
+                    <option value="">Ait France</option>
+                    <option value="">British Airwas</option>
+                    <option value="">Korean Air</option>
+                    <option value="">Japan Airlines</option>
+                    <option value="">Malaysia Airlinea</option>
+                    <option value="">British Airwas</option>
+                    <option value="">Air Asia</option>
+
+
+
+                </select>&emsp;&nbsp;&emsp;
+                <select  id="input-group">
+                    <option value="">Preferred Category</option>
+                    <option value="">Economy Class</option>
+                    <option value="">Business Class</option>
+                    <option value="">First Class</option>
+                </select>
+                </div><!--input-->
+
+                <div id="input2"><!--input2-->
+                    Adult: <input type="number" min ="0" id="adult" placeholder="Adult">
+                    Children:<input type="number" min ="0"  id="child" placeholder="Children(2-11years)"><br>
+                    Infant:<input type="number" min ="0"  id="infant" placeholder="infant(under 2years)">
+                </div><!--input2-->
+
+                <div id="input3"><!--input3-->
+                    Select Your Fare:  <input type="radio"  id ="oneway" onclick="disableReturn()" name="radio" value ="One Way"> One Way
+                    <input type="radio"id="round" name="radio" value ="Round-trip" onclick="enableReturn()" checked> Round-trip<br>
+   
+                   </div><!--input3--><br>
+
+                <div id="input4"><!--input4-->
+                                  Departure Date:   <input type="date" id="depart" onchange="departD()" required>
+                <lable id ="returnL">Return Date:</lable><input type="date" id="return" >
+                </div><!--input4-->
+
+                <div id="input5"><!--input5-->
+                    <h3 class="text-white">Traveller Details</h3>
+                </div><!--input5-->
+                
+                <div id="input6"><!--input6-->
+                    <!--Full name pattern is characters A to Z minimium 5 characters -->
+                <details> <summary> <b onclick ="addCode()">Passenger1</b></summary>
+                 Full Name:<input type="text" id="fullN" placeholder="Full Name"  onfocusout="myName()" pattern ="[A-Za-z].{5,}" required minlength="5">
+                 Gender:  <input type="radio"   name="gender" value ="male"> Male
+				 <input type="radio" name="gender" value ="female"> Female	<br>
+
+                 Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
+                 Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>
+
+                  Phone Number:  <input type="number" min ="0"  id="input-group" placeholder="Phone Number" required>
+                  Email: <input type="email" id="email" placeholder="Email" required><br>
+                  Address: 
+                  <textarea id="address" name="address" rows="4" cols="50"></textarea>
+                  <br>
+                 Meal Pref: <select name ="Meal Pref" id="input-group">
+                    <option value=""></option>
+                    <option value="">Veg</option>
+                    <option value="">Non-Veg</option>                
+                     </select> <br>
+                Check-in Luggage: <select name ="Luggage Pref" id="input-group">
+                        <option value="">25Kg</option>
+                        <option value="">30Kg</option>
+                        <option value="">35kg</option>                
+                         </select> <br>    
+                </details><details>
+                     <summary> <b onclick ="addCode()">Passenger2</b></summary>
+                     Full Name:<input type="text" id="fullN" placeholder="Full Name"  onfocusout="myName()" pattern ="[A-Za-z].{5,}" required minlength="5">
+                     Gender:  <input type="radio"   name="gender2" value ="male"> Male
+                     <input type="radio" name="gender" value ="female"> Female	<br>
+    
+                     Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
+                     Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>
+    
+                      Phone Number:  <input type="number" min ="0"  id="input-group" placeholder="Phone Number" required>
+                      Email: <input type="email" id="P2input-group1" placeholder="Email" required><br>
+                      Address: 
+                      <textarea id="address" name="address" rows="4" cols="50"></textarea>
+                      <br>
+                     Meal Pref: <select name ="Meal Pref" id="input-group">
+                        <option value=""></option>
+                        <option value="">Veg</option>
+                        <option value="">Non-Veg</option>                
+                         </select> <br>
+
+                    Check-in Luggage: <select name ="Luggage Pref" id="input-group">
+                            <option value="">25Kg</option>
+                            <option value="">30Kg</option>
+                            <option value="">35kg</option>                
+                             </select> <br>  
+                    </details>
+
+                    <details>
+                        <summary> <b>Passenger3</b></summary>
+                        Full Name:<input type="text" id="P3fullN" placeholder="Full Name"  onfocusout="myName()" pattern ="[A-Za-z].{5,}" required minlength="5">
+                        Gender:  <input type="radio"   name="gender3" value ="male"> Male
+                        <input type="radio" name="gender" value ="female"> Female	<br>
+       
+                        Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
+                        Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>
+       
+                         Phone Number:  <input type="number" min ="0"  id="input-group" placeholder="Phone Number" required>
+                         Email: <input type="email" id="P3input-group1" placeholder="Email" required><br>
+                         Address: 
+                         <textarea id="address" name="address" rows="4" cols="50"></textarea>
+                         <br>
+                        Meal Pref: <select name ="Meal Pref" id="input-group">
+                           <option value=""></option>
+                           <option value="">Veg</option>
+                           <option value="">Non-Veg</option>                
+                            </select> <br>
+                            Check-in Luggage: <select name ="Luggage Pref" id="input-group">
+                                <option value="">25Kg</option>
+                                <option value="">30Kg</option>
+                                <option value="">35kg</option>                
+                                 </select> <br>
+                            
+                       
+                       </details>
+                     <div id="addCode"></div>
+
+                     <div id="addCode1"></div>
+                     <div id="addCode2"></div>
+
+
+                     
+                 Payment type:<select name ="payType" id="payType" required  onchange="getOption()">
+                    <option value=""></option>
+                    <option value="cc"id ="cc" >Credit card</option>
+                    <option value="cc" id ="cc" >Debit card</option>  
+                    <option value="ppay" id ="phoneP" >Phone Pay</option>                
+                    </select><br>
+                    <section class, name, id ="paySection">
+                    <label id="ccName">Name on Card:</label><input type ="text" placeholder="Name on card"><br>
+             
+                 <label id="cccard">Card Number:&nbsp;</label><input type="tel" pattern="\d*" maxlength="19" placeholder="Card Number" onclick=""><br>
+                 <label id="ccexp">Expiry Date:&emsp;&nbsp;</label><input type ="month"  maxlength ="7">
+                </section>
+                <section class, id ="ppay">
+
+                <b> <label id ="ppay1">To pay over phone, call customer service on 1300 546 120. Booking will be confirmed once the payment is made.</label></b>
+                </section></div><!--input6--><br>
+                <button type="submit" id ="submit" class="btn btn-warning">Submit</button>
+               &emsp; <button type="reset" id="clear" onclick="refresh()" class="btn btn-primary">Clear</button>
+            </div><!--form-->
+
+        </form><!--form-->
+
+    </div><!--container-->
+
+    <audio controls autoplay>
+        <source src="ArtOfSilence.mp3" type="audio/mpeg" loop="true" >
+      </audio>
+    <script src="./index.js"></script>
+</body>
+</html>

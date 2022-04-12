@@ -1,0 +1,197 @@
+body{
+    background-image: url(flight.jpg) !important;
+    background-size: cover;
+    animation: Gradient 80s ease infinite;
+    background-size: 500% 500%;
+
+    
+}
+
+
+
+#container{
+    background-color: #000;
+    height:500px;
+    width:500px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.9;
+    background: linear-gradient(-45deg, #df7b5c, #e45593, #17b8f3, #09ec14);
+    animation: Gradient 15s ease infinite; 
+    background-size: 500% 500%;
+
+
+}
+
+audio { display:none;}
+ #info{
+    position: absolute;
+    right: 1px;
+
+      
+ }
+ #weather{
+     background-color: #97a3a0;
+     width:200px;
+     height:100px;
+     opacity: 0.6;
+ }
+
+#form{
+    background-color: #000;
+    height:2000px;
+    width:800px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.9;
+    background: linear-gradient(-45deg, #872406, #8b6576, #23A6D5, #05e8b3);
+    background-size: 500% 500%;
+    animation: Gradient 15s ease infinite;
+
+
+}
+#arrow {
+height:27px;
+width: 30px;
+background-color: rgb(219, 230, 219);
+color:#872406
+
+}
+#form h3{
+    border-bottom: 2px solid #3399ff;
+    width:220px;
+    padding: 5px;
+}
+::placeholder{
+    color:#fff
+}
+#input #input-group{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    background-color:#202122;
+}
+
+#input #from{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    background-color:#202122
+}
+
+
+#input #to{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    background-color:#202122
+}
+
+
+
+#input2 #adult, #child,#infant{
+    width:195px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+#input3 #input-group{
+    margin-left: 50px;
+}
+#input4 #depart,#return {
+    width:200px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background:rgb(14, 14, 14);
+    color:rgb(236, 230, 230)
+}
+#input4 #input-group1{
+    width:205px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+#input5 h3{
+    border-bottom: 2px solid #3399ff;
+    width:220px;
+    padding: 5px;
+}
+#input6 #input-group, #payType{
+    width:200px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    background: rgb(106, 104, 104)
+
+}
+#input6 #input-group1{
+    width:205px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#removeMe{
+    width:100px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background:rgb(14, 14, 14);
+    color:rgb(236, 230, 230)
+}
+
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  #submit{
+     background-color: rgb(226, 162, 162);
+     margin-left: 100px;
+  }
+  #clear{
+      background-color: #500425;
+  }
