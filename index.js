@@ -40,6 +40,7 @@ function disableReturn(){
 
     window.onload = function() {
 
+        
       
         document.getElementById("paySection").style.visibility='hidden'
         document.getElementById("ppay").style.visibility='hidden'
@@ -144,8 +145,8 @@ function addCode(){
   
 //Adding elements dynamically to html.
     document.getElementById("addCode").innerHTML =`<details><summary> <b>Passenger4</b></summary>
-    Full Name:<input type="text" id="P3fullN" placeholder="Full Name" > Gender:  <input type="radio"   name="gender3" value ="male"> Male
-    <input type="radio" name="gender" value ="female"> Female	<br>
+    Full Name:<input type="text" id="P3fullN" placeholder="Full Name" > Gender:  <input type="radio"   name="gender4" value ="male"> Male
+    <input type="radio" name="gender4" value ="female"> Female	<br>
 
     Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
     Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>
@@ -163,8 +164,8 @@ function addCode(){
   </details>`
 
   document.getElementById("addCode1").innerHTML =`<details><summary> <b>Passenger5</b></summary>
-    Full Name:<input type="text" id="P3fullN" placeholder="Full Name" > Gender:  <input type="radio"   name="gender3" value ="male"> Male
-    <input type="radio" name="gender" value ="female"> Female	<br>
+    Full Name:<input type="text" id="P3fullN" placeholder="Full Name" > Gender:  <input type="radio"   name="gender5" value ="male"> Male
+    <input type="radio" name="gender5" value ="female"> Female	<br>
 
     Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
     Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>
@@ -182,8 +183,8 @@ function addCode(){
   </details>`
   
   document.getElementById("addCode2").innerHTML =`<details><summary> <b>Passenger6</b></summary>
-    Full Name:<input type="text" id="P3fullN" placeholder="Full Name" > Gender:  <input type="radio"   name="gender3" value ="male"> Male
-    <input type="radio" name="gender" value ="female"> Female	<br>
+    Full Name:<input type="text" id="P3fullN" placeholder="Full Name" > Gender:  <input type="radio"   name="gender6" value ="male"> Male
+    <input type="radio" name="gender6" value ="female"> Female	<br>
 
     Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
     Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>

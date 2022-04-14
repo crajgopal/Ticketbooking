@@ -77,8 +77,8 @@
                 </div><!--input2-->
 
                 <div id="input3"><!--input3-->
-                    Select Your Fare:  <input type="radio"  id ="oneway" onclick="disableReturn()" name="radio" value ="One Way"> One Way
-                    <input type="radio"id="round" name="radio" value ="Round-trip" onclick="enableReturn()" checked> Round-trip<br>
+                    Select Your Fare:  <input type="radio" name ="radiof" id ="oneway" onclick="disableReturn()"  value ="One Way"> One Way
+                    <input type="radio"id="round"  name ="radiof" value ="Round-trip" onclick="enableReturn()" checked> Round-trip<br>
    
                    </div><!--input3--><br>
 
@@ -97,8 +97,8 @@
                  Full Name:<input type="text" id="fullN" placeholder="Full Name"  onfocusout="myName()"
                   pattern ="[A-Za-z].{5,}" required minlength="5">
                   
-                 Gender:  <input type="radio"   name="gender" value ="male"> Male
-				 <input type="radio" name="gender" value ="female"> Female	<br>
+                 Gender:  <input type="radio" name="gender1"   value ="male"> Male
+				 <input type="radio" name="gender1" value ="female"> Female	<br>
 
                  Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
                  Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>
@@ -120,9 +120,9 @@
                          </select> <br>    
                 </details><details>
                      <summary> <b onclick ="addCode()">Passenger2</b></summary>
-                     Full Name:<input type="text" id="fullN" placeholder="Full Name"  onfocusout="myName()" pattern ="[A-Za-z].{5,}" required minlength="5">
+                     Full Name:<input type="text" id="fullN" placeholder="Full Name"  onfocusout="myName()" pattern ="[A-Za-z].{5,}"  minlength="5" required>
                      Gender:  <input type="radio"   name="gender2" value ="male"> Male
-                     <input type="radio" name="gender" value ="female"> Female	<br>
+                     <input type="radio" name="gender2" value ="female"> Female	<br>
     
                      Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
                      Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>
@@ -149,7 +149,7 @@
                         <summary> <b>Passenger3</b></summary>
                         Full Name:<input type="text" id="P3fullN" placeholder="Full Name"  onfocusout="myName()" pattern ="[A-Za-z].{5,}" required minlength="5">
                         Gender:  <input type="radio"   name="gender3" value ="male"> Male
-                        <input type="radio" name="gender" value ="female"> Female	<br>
+                        <input type="radio" name="gender3" value ="female"> Female	<br>
        
                         Date of Birth:<input type="date" id="input-group1" placeholder="Date of Birth">
                         Age:<input type="number" min ="0" id="input-group1" placeholder="Age"><br>
@@ -186,10 +186,10 @@
                     <option value="ppay" id ="phoneP" >Phone Pay</option>                
                     </select><br>
                     <section class, name, id ="paySection">
-                    <label id="ccName">Name on Card:</label><input type ="text" placeholder="Name on card" required><br>
+                    <label id="ccName">Name on Card:</label><input type ="text" placeholder="Name on card">
              
-                 <label id="cccard">Card Number:&nbsp;</label><input type="tel" pattern="\d*" maxlength="19" placeholder="Card Number" required><br>
-                 <label id="ccexp">Expiry Date:&emsp;&nbsp;</label><input type ="month"  maxlength ="7" required>
+                 <label id="cccard">Card Number:&nbsp;</label><input type="tel" pattern="\d*" maxlength="19" placeholder="Card Number" ><br>
+                 <label id="ccexp">Expiry Date:&emsp;&nbsp;</label><input type ="month"  maxlength ="7" >
                 </section>
                 <section class, id ="ppay">
 
